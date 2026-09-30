@@ -10,6 +10,14 @@ Gradio app for SciLifeLab Serve. Upload a standard Xenium `cell_feature_matrix.h
 
 All thresholds and the resolution are editable in the UI.
 
+**Spatial plot (optional).** Also upload the matching Xenium `cells.parquet` and the app draws
+the cell centroids (`x_centroid`, `y_centroid`) coloured by Leiden cluster, joined on
+`cell_id` = `Barcode`. Cells removed by QC are shown in grey (can be turned off). You can upload
+`cells.parquet` together with the `.h5`, or after the run and press **Draw spatial plot** (also
+use it to redraw with a different point size). The plot is returned as
+`<sample>_spatial_clusters.png` / `.pdf` and added to the output zip. The y axis is inverted so
+the orientation matches Xenium Explorer.
+
 `cluster.csv` format (what HistoSeg expects, same as the Xenium Explorer / GraphClust CSV):
 
 ```

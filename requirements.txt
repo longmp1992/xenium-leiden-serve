@@ -5,3 +5,5 @@ h5py
 numpy
 pandas
 gradio>=5.24,<6.0
+pyarrow
+matplotlib
